@@ -56,6 +56,8 @@
             --accent-hover: #d97706;
             --kakao: #fee500;
             --kakao-text: #191919;
+            --line: #06c755;
+            --line-text: #ffffff;
             --text-dark: #1f2937;
             --text-light: #6b7280;
             --bg-light: #f8fafc;
@@ -74,7 +76,7 @@
             color: var(--text-dark);
             background-color: var(--bg-light);
             line-height: 1.6;
-            padding-bottom: 70px;
+            padding-bottom: 75px;
         }
 
         a {
@@ -111,7 +113,7 @@
         }
 
         .logo {
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 900;
             color: var(--white);
             display: flex;
@@ -212,7 +214,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 15px;
+            gap: 12px;
         }
 
         .btn {
@@ -220,9 +222,9 @@
             align-items: center;
             justify-content: center;
             gap: 8px;
-            padding: 16px 32px;
+            padding: 14px 24px;
             border-radius: 10px;
-            font-size: 1.1rem;
+            font-size: 1.05rem;
             font-weight: 800;
             transition: transform 0.2s, box-shadow 0.2s;
         }
@@ -240,6 +242,11 @@
         .btn-kakao {
             background: var(--kakao);
             color: var(--kakao-text);
+        }
+
+        .btn-line {
+            background: var(--line);
+            color: var(--line-text);
         }
 
         /* Section Common */
@@ -465,9 +472,10 @@
         .mobile-sticky a {
             flex: 1;
             text-align: center;
-            padding: 16px 10px;
+            padding: 15px 5px;
             font-weight: 800;
-            font-size: 1rem;
+            font-size: 0.92rem;
+            white-space: nowrap;
         }
 
         .sticky-call {
@@ -478,6 +486,11 @@
         .sticky-kakao {
             background: var(--kakao);
             color: var(--kakao-text);
+        }
+
+        .sticky-line {
+            background: var(--line);
+            color: var(--line-text);
         }
 
         @media (max-width: 768px) {
@@ -495,9 +508,9 @@
         <div class="container header-inner">
             <div class="logo">
                 <span class="badge" data-lang="kr">정식허가 영업용</span>
-                <span class="badge" data-lang="jp">公式許可・営業用車両</span>
+                <span class="badge" data-lang="jp">公式許可・営業用</span>
                 <span data-lang="kr">김국일 장유김해공항콜밴</span>
-                <span data-lang="jp">金海空港 8人乗りコールバン</span>
+                <span data-lang="jp">金海空港 コールバン</span>
             </div>
             <div class="lang-switch">
                 <button class="lang-btn active" id="btn-kr" onclick="setLang('kr')">🇰🇷 한국어</button>
@@ -550,8 +563,12 @@
                     <span data-lang="jp">📞 電話予約: +82-10-5196-8204</span>
                 </a>
                 <a href="https://pf.kakao.com/_NFIiX" target="_blank" rel="noopener" class="btn btn-kakao">
-                    <span data-lang="kr">💬 카카오톡 24시 실시간 상담</span>
-                    <span data-lang="jp">💬 カカオトーク 日本語相談OK</span>
+                    <span data-lang="kr">💬 카카오톡 상담</span>
+                    <span data-lang="jp">💬 カカオトーク相談</span>
+                </a>
+                <a href="https://line.me/ti/p/7uUbqYgg2a" target="_blank" rel="noopener" class="btn btn-line">
+                    <span data-lang="kr">💚 LINE 문의 (日本語OK)</span>
+                    <span data-lang="jp">💚 LINEお問い合わせ</span>
                 </a>
             </div>
         </div>
@@ -572,32 +589,32 @@
                     <div class="feature-icon">🚐</div>
                     <h3 data-lang="kr">특장 롱바디 & 캐리어 10개+</h3>
                     <h3 data-lang="jp">特装ロングボディ＆大容量荷室</h3>
-                    <p data-lang="kr">짐을 많이 실을 수 있도록 롱바디로 특수 제작했습니다. 승객 1~7인 탑승이 가능하며(짐이 극도로 많을 시 최대 3~7인 여유 탑승), 대형 캐리어 10개 이상과 골프백도 거뜬히 실립니다.</p>
-                    <p data-lang="jp">荷物をたっぷり積めるよう特別製作したロングボディ車両です。乗客1〜7名様までご乗車可能（お荷物が非常に多い場合は3〜7名様でゆったり乗車）。大型スーツケース10個以上やゴルフバッグも楽々積載できます。</p>
+                    <p data-lang="kr">짐을 많이 실을 수 있도록 롱바디로 특수 제작했습니다. 승객 1~7인 탑승이 가능하며, 대형 캐리어 10개 이상과 골프백도 거뜬히 실립니다.</p>
+                    <p data-lang="jp">荷物をたっぷり積めるよう特別製作したロングボディ車両です。乗客1〜7名様までご乗車可能。大型スーツケース10個以上やゴルフバッグも楽々積載できます。</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
                     <h3 data-lang="kr">정식 허가 영업용 노란 번호판</h3>
                     <h3 data-lang="jp">政府公認・営業用ナンバー車両</h3>
-                    <p data-lang="kr">불법 유상운송 렌트카가 아닌 정식 영업용 허가 차량(운수업 등록)입니다. 검증된 베테랑 기사가 정시에 도착하여 집 앞부터 공항 게이트 앞까지 가장 안전하게 모십니다.</p>
-                    <p data-lang="jp">違法な白タクや無許可レンタカーではなく、韓国政府から正式許可を受けた営業用ナンバー（黄色ナンバー）車両です。経験豊富なプロドライバーが時間通りにホテルや空港ゲート前までお迎えにあがります。</p>
+                    <p data-lang="kr">불법 유상운송 렌트카가 아닌 정식 영업용 허가 차량(운수업 등록)입니다. 베테랑 기사가 정시에 도착하여 안전하게 모십니다.</p>
+                    <p data-lang="jp">違法な白タクではなく、韓国政府から正式許可を受けた営業用ナンバー（黄色ナンバー）車両です。経験豊富なドライバーが安全にお迎えにあがります。</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">💎</div>
                     <h3 data-lang="kr">추가 요금 0원! 투명한 정액제</h3>
                     <h3 data-lang="jp">追加料金0円！完全定額制</h3>
-                    <p data-lang="kr">예약 시 안내해 드린 요금 외에 주유비, 톨게이트비(통행료), 기사 팁 등을 절대 따로 청구하지 않습니다. 신용카드 결제, 전자세금계산서, 현금영수증 발행이 모두 가능합니다.</p>
-                    <p data-lang="jp">ご予約時に 안내した料金以外に、燃料代・高速道路料金（通行料）・ドライバーへのチップ等を別途請求することは一切ございません。クレジットカード決済や領収書の発行にも完全対応しております。</p>
+                    <p data-lang="kr">안내해 드린 요금 외에 주유비, 톨게이트비, 기사 팁 등을 절대 따로 청구하지 않습니다. 카드 결제 및 현금영수증 발행 가능합니다.</p>
+                    <p data-lang="jp">ご予約時に案内した料金以外に、燃料代・高速道路料金・チップ等を別途請求することは一切ございません。カード決済や領収書発行にも対応しています。</p>
                 </div>
 
                 <div class="feature-card">
                     <div class="feature-icon">🌏</div>
                     <h3 data-lang="kr">일본인 관광객 & 전국 투어 전문</h3>
                     <h3 data-lang="jp">日本人観光客・貸切ツアー専門</h3>
-                    <p data-lang="kr">김해공항 픽업/샌딩은 물론 부산·경주·거제·울산 등 관광 투어, 외국인 바이어 의전, 골프 투어, 기업 출장, 지방 장거리 이동까지 전국 어디든 24시간 예약제로 운행합니다.</p>
-                    <p data-lang="jp">金海空港〜釜山市内ホテルの送迎はもちろん、慶州・巨済・蔚山・大邱などの貸切観光ツアー、ゴルフ送迎、ビジネス視察、長距離移動まで、深夜・早朝を問わず24時間予約制で全国どこへでも運行いたします。</p>
+                    <p data-lang="kr">김해공항 픽업/샌딩은 물론 부산·경주·거제·울산 등 관광 투어, 외국인 바이어 의전, 골프 투어, 지방 장거리 이동까지 24시간 운행합니다.</p>
+                    <p data-lang="jp">金海空港〜釜山市内送迎はもちろん、慶州・巨済・蔚山などの貸切観光ツアー、ゴルフ送迎、ビジネス視察、長距離移動まで24時間運行いたします。</p>
                 </div>
             </div>
         </div>
@@ -659,22 +676,19 @@
 
             <div class="service-tags">
                 <span class="service-tag" data-lang="kr">✈️ 김해공항 픽업 / 샌딩</span>
-                <span class="service-tag" data-lang="jp">✈️ 金海国際空港 送迎（ピックアップ・センディング）</span>
+                <span class="service-tag" data-lang="jp">✈️ 金海国際空港 送迎</span>
 
                 <span class="service-tag" data-lang="kr">🗾 일본인·외국인 관광객 맞춤 투어</span>
                 <span class="service-tag" data-lang="jp">🗾 日本人観光客 釜山・慶州・巨済 貸切ツアー</span>
 
                 <span class="service-tag" data-lang="kr">💼 외국인 바이어 & VIP 의전</span>
-                <span class="service-tag" data-lang="jp">💼 海外バイヤー・VIP送迎・企業出張</span>
+                <span class="service-tag" data-lang="jp">💼 VIP送迎・企業出張</span>
 
                 <span class="service-tag" data-lang="kr">⛳ 골프 투어 (골프백 다수 적재)</span>
-                <span class="service-tag" data-lang="jp">⛳ ゴルフツアー送迎（ゴルフバッグ多数OK）</span>
+                <span class="service-tag" data-lang="jp">⛳ ゴルフツアー送迎</span>
 
-                <span class="service-tag" data-lang="kr">🎓 유학생 픽업 & 체험학습 차량</span>
-                <span class="service-tag" data-lang="jp">🎓 留学生の引越し・お荷物移動</span>
-
-                <span class="service-tag" data-lang="kr">💐 웨딩카 & 가족 여행</span>
-                <span class="service-tag" data-lang="jp">💐 家族旅行・グループ旅行・ウェディング</span>
+                <span class="service-tag" data-lang="kr">🎓 유학생 픽업 & 짐 이동</span>
+                <span class="service-tag" data-lang="jp">🎓 留学生のお荷物移動</span>
 
                 <span class="service-tag" data-lang="kr">🛣️ 부산·경남 및 전국 장거리 운행</span>
                 <span class="service-tag" data-lang="jp">🛣️ 韓国全国 長距離チャーター運行</span>
@@ -713,7 +727,7 @@
                         <tr>
                             <td>
                                 <strong data-lang="kr">부산광역시 (부산시 일원)</strong>
-                                <strong data-lang="jp">釜山広域市（西面・南浦洞・海雲台など釜山エリア）</strong>
+                                <strong data-lang="jp">釜山広域市（西面・南浦洞・海雲台など）</strong>
                             </td>
                             <td class="price">50,000원(KRW) ~</td>
                         </tr>
@@ -734,20 +748,20 @@
                         <tr>
                             <td>
                                 <strong data-lang="kr">울산광역시</strong>
-                                <strong data-lang="jp">蔚山広域市（蔚山エリア）</strong>
+                                <strong data-lang="jp">蔚山広域市</strong>
                             </td>
                             <td class="price">120,000원(KRW) ~</td>
                         </tr>
                         <tr>
                             <td>
                                 <strong data-lang="kr">경주시 (보문단지·황리단길 등)</strong>
-                                <strong data-lang="jp">慶州市（普門団地・皇理団ギルなど慶州観光エリア）</strong>
+                                <strong data-lang="jp">慶州市（普門団地・皇理団ギルなど）</strong>
                             </td>
                             <td class="price">130,000원(KRW) ~</td>
                         </tr>
                         <tr>
                             <td>
-                                <strong data-lang="kr">거제시 (고현·옥포·장승포 등 거제 전 지역)</strong>
+                                <strong data-lang="kr">거제시 (고현·옥포·장승포 등)</strong>
                                 <strong data-lang="jp">巨済市（古県・玉浦など巨済島全域）</strong>
                             </td>
                             <td class="price">150,000원(KRW) ~</td>
@@ -755,14 +769,14 @@
                         <tr>
                             <td>
                                 <strong data-lang="kr">진주시</strong>
-                                <strong data-lang="jp">晋州市（晋州エリア）</strong>
+                                <strong data-lang="jp">晋州市</strong>
                             </td>
                             <td class="price">150,000원(KRW) ~</td>
                         </tr>
                         <tr>
                             <td>
                                 <strong data-lang="kr">대구광역시</strong>
-                                <strong data-lang="jp">大邱広域市（大邱エリア）</strong>
+                                <strong data-lang="jp">大邱広域市</strong>
                             </td>
                             <td class="price">150,000원(KRW) ~</td>
                         </tr>
@@ -770,8 +784,8 @@
                 </table>
 
                 <div class="price-subnote">
-                    <p data-lang="kr">※ 상세 세부 지역(구/동) 및 경유지 유무에 따라 요금이 일부 조정될 수 있으며, 양산·함안·통영·사천 등 표에 없는 전국 모든 지역도 합리적인 정액 요금으로 운행합니다. 일일 관광 투어(대절) 요금은 별도 문의해 주세요.</p>
-                    <p data-lang="jp">※ 詳しい到着エリア（区・洞）や経由地の有無により料金が変動する場合がございます。梁山・咸安・統営など表にない韓国全土への移動や、1日観光チャーター（貸切ツアー）料金もお気軽にお問い合わせください。</p>
+                    <p data-lang="kr">※ 상세 세부 지역 및 경유지 유무에 따라 요금이 일부 조정될 수 있으며, 양산·함안·통영 등 표에 없는 전국 모든 지역도 합리적인 요금으로 운행합니다.</p>
+                    <p data-lang="jp">※ 詳しいエリアや経由地の有無により料金が変動する場合がございます。梁山・咸安など表にない地域への移動や貸切ツアー料金もお気軽にお問い合わせください。</p>
                 </div>
             </div>
         </div>
@@ -783,7 +797,7 @@
             <div class="footer-grid">
                 <div class="footer-info">
                     <div class="footer-title" data-lang="kr">김국일장유김해공항콜밴</div>
-                    <div class="footer-title" data-lang="jp">金海空港 8人乗りスタリア コールバン</div>
+                    <div class="footer-title" data-lang="jp">金海空港 コールバン</div>
                     <p data-lang="kr">대표자: 김국일 | 사업자등록번호: 116-09-12478 (일반과세자)</p>
                     <p data-lang="jp">代表者: キム・グギル (Kim Guk-il) | 事業者登録番号: 116-09-12478</p>
                     <p data-lang="kr">업태/종목: 운수업 / 개인용달, 콜밴 (정식 허가 영업용 차량)</p>
@@ -796,13 +810,13 @@
                 <div class="footer-info">
                     <div class="footer-title" data-lang="kr">24시간 예약 및 상담 안내</div>
                     <div class="footer-title" data-lang="jp">24時間 ご予約・お問い合わせ</div>
-                    <p style="font-size: 1.3rem; font-weight: 900; color: var(--accent); margin-bottom: 10px;">
-                        TEL: 010-5196-8204 <span style="font-size:0.95rem; color:#cbd5e1;">(Int'l: +82-10-5196-8204)</span>
+                    <p style="font-size: 1.25rem; font-weight: 900; color: var(--accent); margin-bottom: 8px;">
+                        TEL: 010-5196-8204 <span style="font-size:0.9rem; color:#cbd5e1;">(+82-10-5196-8204)</span>
                     </p>
-                    <p data-lang="kr">카카오톡 채널: <a href="https://pf.kakao.com/_NFIiX" target="_blank" style="color:var(--kakao); text-decoration:underline;">https://pf.kakao.com/_NFIiX</a></p>
-                    <p data-lang="jp">カカオトーク相談: <a href="https://pf.kakao.com/_NFIiX" target="_blank" style="color:var(--kakao); text-decoration:underline;">https://pf.kakao.com/_NFIiX</a></p>
-                    <p data-lang="kr" style="margin-top: 10px;">운행지역: 김해공항, 부산, 김해, 양산, 창원, 진주, 함안, 거제, 울산, 경주, 대구 및 전국 일원</p>
-                    <p data-lang="jp" style="margin-top: 10px;">運行エリア: 金海国際空港、釜山、金海、昌原、巨済、晋州、蔚山、慶州、大邱、韓国全域</p>
+                    <p data-lang="kr">카카오톡: <a href="https://pf.kakao.com/_NFIiX" target="_blank" style="color:var(--kakao); text-decoration:underline;">채널 바로가기</a></p>
+                    <p data-lang="jp">カカオトーク: <a href="https://pf.kakao.com/_NFIiX" target="_blank" style="color:var(--kakao); text-decoration:underline;">チャンネルはこちら</a></p>
+                    <p data-lang="kr" style="margin-top: 6px;">LINE ID: <a href="https://line.me/ti/p/7uUbqYgg2a" target="_blank" style="color:#4ade80; text-decoration:underline;">7uUbqYgg2a (친구추가)</a></p>
+                    <p data-lang="jp" style="margin-top: 6px;">LINE 相談: <a href="https://line.me/ti/p/7uUbqYgg2a" target="_blank" style="color:#4ade80; text-decoration:underline;">友だち追加はこちら</a></p>
                 </div>
             </div>
             <div style="text-align: center; font-size: 0.8rem;">
@@ -811,15 +825,19 @@
         </div>
     </footer>
 
-    <!-- 모바일 하단 고정 예약 바 -->
+    <!-- 모바일 하단 고정 예약 바 (전화 + 카카오톡 + 라인) -->
     <div class="mobile-sticky">
         <a href="tel:010-5196-8204" class="sticky-call">
-            <span data-lang="kr">📞 전화 예약하기</span>
-            <span data-lang="jp">📞 電話で予約する</span>
+            <span data-lang="kr">📞 전화</span>
+            <span data-lang="jp">📞 電話</span>
         </a>
         <a href="https://pf.kakao.com/_NFIiX" target="_blank" rel="noopener" class="sticky-kakao">
-            <span data-lang="kr">💬 카카오톡 상담</span>
-            <span data-lang="jp">💬 カカオトーク相談</span>
+            <span data-lang="kr">💬 카카오톡</span>
+            <span data-lang="jp">💬 カ카오톡</span>
+        </a>
+        <a href="https://line.me/ti/p/7uUbqYgg2a" target="_blank" rel="noopener" class="sticky-line">
+            <span data-lang="kr">💚 LINE 문의</span>
+            <span data-lang="jp">💚 LINE相談</span>
         </a>
     </div>
 

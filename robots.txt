@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://callvan.github.io/sitemap.xml
+Sitemap: https://callvan.github.io/goodcallvan/sitemap.xml
